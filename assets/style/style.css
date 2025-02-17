@@ -14,6 +14,9 @@
 .btn-orange {
   background-color: var(--orange) !important;
   color: white !important;
+  &:hover {
+    background-color: #b83e30 !important;
+  }
 }
 
 /* Arvo font */
@@ -28,6 +31,12 @@
   font-style: normal;
 }
 
+body {
+  hr {
+    border-top: 2px solid #e74c3c;
+    width: 7rem;
+  }
+}
 /* ------------- index ------------- */
 
 header {
@@ -39,23 +48,78 @@ header {
     background-repeat: no-repeat;
   }
 
-  span {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-    text-transform: uppercase;
+  .nav-link:hover {
+    color: var(--orange) !important;
   }
 
   h1 {
-    font-weight: 200rem !important;
+    font-size: 4rem !important;
   }
 }
 
 main {
-  /* h2 {
-  } */
+  h2 {
+    font-size: 1.5rem;
+    color: var(--orange);
+    text-transform: uppercase;
+  }
+  span {
+    color: var(--orange);
+  }
 
   .card {
     width: 18rem;
+  }
+  .icone {
+    background-color: rgb(71, 71, 71);
+    border-radius: 100%;
+    width: 85px;
+    height: 85px;
+  }
+  i {
+    font-size: 2rem;
+    color: white;
+  }
+}
+
+.bgfooter {
+  background-color: var(--orange);
+  min-height: 30vh;
+}
+
+/* -----------who we are -------------- */
+header {
+  .landing-h {
+    min-height: 50vh;
+    background-image: url("../img/hero-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+main {
+  h5 {
+    color: var(--orange);
+    font-weight: bold;
+  }
+
+  #team-person {
+    height: 20rem;
+    width: 15rem;
+  }
+  /* Les image-teams */
+  .image-team-1 {
+    background-image: url("../img/team4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 20rem;
+    width: 15rem;
+  }
+
+  #section-sponsors a {
+    color: var(--orange);
+    text-decoration: underline;
   }
 }
