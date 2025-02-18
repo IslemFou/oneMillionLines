@@ -104,12 +104,38 @@ main {
     font-weight: bold;
   }
 
-  #team-person {
+  .team-person {
     height: 20rem;
     width: 15rem;
   }
   /* Les image-teams */
   .image-team-1 {
+    background-image: url("../img/team1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 20rem;
+    width: 15rem;
+  }
+  .image-team-2 {
+    background-image: url("../img/team2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 20rem;
+    width: 15rem;
+  }
+
+  .image-team-3 {
+    background-image: url("../img/team3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 20rem;
+    width: 15rem;
+  }
+
+  .image-team-4 {
     background-image: url("../img/team4.jpg");
     background-size: cover;
     background-position: center;
