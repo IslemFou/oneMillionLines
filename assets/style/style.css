@@ -51,10 +51,6 @@ header {
   .nav-link:hover {
     color: var(--orange) !important;
   }
-
-  h1 {
-    font-size: 4rem !important;
-  }
 }
 
 main {
@@ -165,3 +161,6 @@ main {
   top: 57%;
   font-size: 1.3em;
 }
+
+/* @media screen and (max-width: 992.98px) {
+} */
