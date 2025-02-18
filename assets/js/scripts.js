@@ -33,8 +33,9 @@ for (let i = 0; i < team.length; i++) {
   });
 }
 
-// page get involved
-// validation du formulaire
+// ------------------ page get involved---------------
+// ---------------- validation du formulaire ----------------
+
 let form = document.querySelector("form");
 // console.log(form);
 let inputPrenom = document.querySelector("#prenom");
@@ -45,6 +46,9 @@ let inputEmail = document.querySelector("#email");
 // console.log(inputEmail);
 let inputMessage = document.querySelector("#message");
 // console.log(inputMessage);
+
+let select = document.querySelector("#select");
+let message = document.querySelector("#message");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -67,7 +71,6 @@ form.addEventListener("submit", function (event) {
     //ajout de la classe error
     p.setAttribute("class", "error");
     document.querySelector(".divPrenom").append(p);
-    document.querySelector("i").classList.add("d-none");
   } else {
     let i = document.createElement("i");
     i.setAttribute("class", "bi");
@@ -82,7 +85,6 @@ form.addEventListener("submit", function (event) {
     //ajout de la classe error
     p.setAttribute("class", "error");
     document.querySelector(".divName").append(p);
-    document.querySelector("i").classList.add("d-none");
   } else {
     let i = document.createElement("i");
     i.setAttribute("class", "bi");
@@ -101,5 +103,22 @@ form.addEventListener("submit", function (event) {
     i.setAttribute("class", "bi");
     i.classList.add("text-success", "bi-check", "position-absolute");
     document.querySelector(".divEmail").append(i);
+  }
+
+  //ON TESTE LE SELECT et le message
+  if (select.value == "" && message.value.length < 10) {
+    //erreur
+    select.style.border = "thick solid rgb(208, 24, 36)";
+    message.style.border = "thick solid rgb(208, 24, 36)";
+  } else if (select.value != "" && message.value.length < 10) {
+    select.style.border = "thick solid rgb(24, 208, 61)";
+    message.style.border = "thick solid rgb(208, 24, 36)";
+  } else if (select.value == "" && message.value.length >= 10) {
+    select.style.border = "thick solid rgb(208, 24, 36)";
+    message.style.border = "thick solid rgb(24, 208, 61)";
+  } else {
+    //tout est ok
+    select.style.border = "thick solid rgb(24, 208, 61)";
+    message.style.border = "thick solid rgb(24, 208, 61)";
   }
 });
