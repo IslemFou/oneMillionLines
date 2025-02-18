@@ -10,7 +10,7 @@ job = document.querySelectorAll(".job");
 
 function changeImage(element, imagePerson) {
   element.classList.add(imagePerson);
-  element.style.transition = "all 0.5s";
+  element.style.transition = "all 0.5s ease-in-out";
 }
 
 function removeImage(element, imagePerson) {
@@ -32,3 +32,74 @@ for (let i = 0; i < team.length; i++) {
     job[i].classList.remove("text-white");
   });
 }
+
+// page get involved
+// validation du formulaire
+let form = document.querySelector("form");
+// console.log(form);
+let inputPrenom = document.querySelector("#prenom");
+
+let inputNom = document.querySelector("#name");
+// console.log(inputNom);
+let inputEmail = document.querySelector("#email");
+// console.log(inputEmail);
+let inputMessage = document.querySelector("#message");
+// console.log(inputMessage);
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  //création de variables qui stocke la valeur des inputs
+  let vPrenom = inputPrenom.value.trim();
+  // console.log(vPrenom);
+  let vNom = inputNom.value.trim();
+  // console.log(vNom);
+
+  let vEmail = inputEmail.value.trim();
+  let vMessage = inputMessage.value.trim();
+  //regex
+  let regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+
+  //on teste le prénom
+  if (vPrenom.length < 5 || vPrenom.length > 20) {
+    let p = document.createElement("p");
+    p.textContent = "Le prénom n'est pas valide";
+    //ajout de la classe error
+    p.setAttribute("class", "error");
+    document.querySelector(".divPrenom").append(p);
+    document.querySelector("i").classList.add("d-none");
+  } else {
+    let i = document.createElement("i");
+    i.setAttribute("class", "bi");
+    i.classList.add("text-success", "bi-check", "position-absolute");
+    document.querySelector(".divPrenom").append(i);
+  }
+
+  //on teste le nom
+  if (vNom.length < 5 || vNom.length > 20) {
+    let p = document.createElement("p");
+    p.textContent = "Le nom n'est pas valide";
+    //ajout de la classe error
+    p.setAttribute("class", "error");
+    document.querySelector(".divName").append(p);
+    document.querySelector("i").classList.add("d-none");
+  } else {
+    let i = document.createElement("i");
+    i.setAttribute("class", "bi");
+    i.classList.add("text-success", "bi-check", "position-absolute");
+    document.querySelector(".divName").append(i);
+  }
+
+  //on teste l'email
+  if (!regexEmail.test(vEmail)) {
+    let p = document.createElement("p");
+    p.textContent = "L'email n'est pas valide";
+    p.setAttribute("class", "error");
+    document.querySelector(".divEmail").append(p);
+  } else {
+    let i = document.createElement("i");
+    i.setAttribute("class", "bi");
+    i.classList.add("text-success", "bi-check", "position-absolute");
+    document.querySelector(".divEmail").append(i);
+  }
+});

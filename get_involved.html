@@ -76,33 +76,34 @@
     <hr class="mx-auto">
     <form action="" class="form">
         <fieldset>
-            <div class="mb-3">
-                <label for="prenom" class="form-label">Your first name</label>
+            <div class="mb-3 position-relative divPrenom">
+                <label for="prenom" class="form-label">Votre prenom</label>
                 <input class="form-control" type="text" placeholder="Severus" aria-label="default input example" id="prenom" required>
             </div>
-            <div class="mb-3">
-                <label for="" class="form-label">Your last Name</label>
+            <div class="mb-3 position-relative divName">
+                <label for="" class="form-label">Votre nom</label>
                 <input class="form-control" type="text" placeholder="Snape" aria-label="default input example" id="name" required>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 position-relative divSelect">
                 <label for="" class="form-label">Why are-you contacting us</label>
                 <select class="form-select" aria-label="Default select example">
-                    <option selected>Select an option</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option selected>What do you want to be ?</option>
+                    <option value="1">I want to be an educator</option>
+                    <option value="2">I want to be a teacher</option>
+                    <option value="3">I'm a sponsor</option>
+                    <option value="3">Other</option>
                   </select>
             </div>
             
-              <div class="mb-3">
+              <div class="mb-3 position-relative divEmail">
                 <label for="" class="form-label">Your email</label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="nom@email.com">
+                <input type="text" name="email" id="email" class="form-control" placeholder="nom@email.com">
               </div>
-              <div class="mb-3">
+              <div class="mb-3 position-relative divMessage">
                 <label for="message" class="form-label">Message</label>
                 <textarea class="form-control" id="message" rows="6"></textarea>
               </div>
-            <button class="btn btn-orange btn-lg mt-2 m-3">Subscribe</button>
+            <button type="submit" class="btn btn-orange btn-lg mt-2 m-3">Subscribe</button>
         </fieldset>
     </form>
  </section>
